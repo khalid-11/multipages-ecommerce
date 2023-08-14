@@ -19,6 +19,13 @@ body {
   font-family: "JF Flat Regular", "Segoe UI", Tahoma, Geneva, Verdana,
     sans-serif;
 }
+
+.heading {
+  font-size: 24px;
+  margin-bottom: 25px;
+}
+
+/* navbar */
 .custom-navbar {
   border-bottom: 3px solid #f7f8f3;
   width: 100%;
@@ -227,4 +234,88 @@ body {
 
 #stor-features .feature + .feature {
   border-right: 1px solid #eef0ea;
+}
+
+/* الاكثر مبيعاً */
+.custom-thumbnail img {
+  height: 230px;
+  width: 100%;
+  max-width: 250px;
+}
+
+.custom-thumbnail {
+  border: 2px solid #eef0ea;
+  padding: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom-thumbnail:hover {
+  border-color: #53ccd7;
+}
+.custom-thumbnail h4 {
+  font-size: 18px;
+}
+
+.price {
+  color: #53ccd7;
+}
+
+.rating {
+  color: #c2c2c2;
+}
+
+.rating .active {
+  color: gold;
+}
+
+.custom-thumbnail .overlay {
+  width: calc(100% - 16px);
+  height: calc(250px - 16px);
+  position: absolute;
+  background-color: #53ccd773;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.custom-thumbnail .overlay .btn {
+  background-color: #53ccd7;
+  color: white;
+}
+.custom-thumbnail .overlay .btn {
+  transition: all 0.3s ease;
+}
+.custom-thumbnail .overlay .btn:hover {
+  background-color: transparent;
+  border: 1px solid #2aff95;
+  color: #2aff95;
+}
+
+.custom-thumbnail:hover .overlay {
+  opacity: 1;
+}
+
+.custom-thumbnail .sale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding-inline: 10px;
+  padding-block: 5px;
+}
+#carousel-most-sold .carousel-indicators {
+  bottom: -75px;
+}
+#carousel-most-sold .carousel-indicators li {
+  height: 13px !important;
+  width: 13px !important;
+  margin: 2px !important;
+  list-style-type: none;
+  background-color: #ccc !important;
+}
+#carousel-most-sold .carousel-indicators li.active {
+  background-color: #000000 !important;
+  opacity: 1 !important;
 }

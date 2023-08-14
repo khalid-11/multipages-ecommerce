@@ -9,4 +9,13 @@ const tooltipList = [...tooltipTriggerList].map(
   (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
 );
 
+const addToCart = document.querySelectorAll(".custom-thumbnail .overlay .btn");
+console.log(addToCart);
+
+addToCart.forEach((e) => {
+  e.addEventListener("click", () => {
+    window.alert(" تأكيد اضافه المنتج الى عربة التسوق");
+  });
+});
+
 console.log("heloo");
