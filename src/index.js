@@ -18,4 +18,29 @@ addToCart.forEach((e) => {
   });
 });
 
-console.log("heloo");
+let colorOptionsInputs = document.querySelectorAll(
+  ' .color-option input[type="radio"]'
+);
+let sizeOptionsInputs = document.querySelectorAll(
+  " .size-option input[type='radio']"
+);
+
+let colorOptions = document.querySelectorAll(".color-option");
+let sizeOptions = document.querySelectorAll(".size-option");
+
+colorOptionsInputs.forEach((item) => {
+  item.addEventListener("change", () => {
+    colorOptions.forEach((i) => {
+      i.classList.remove("active");
+    });
+    item.parentNode.parentNode.classList.add("active");
+  });
+});
+sizeOptionsInputs.forEach((item) => {
+  item.addEventListener("change", () => {
+    sizeOptions.forEach((i) => {
+      i.classList.remove("active");
+    });
+    item.parentNode.parentNode.classList.add("active");
+  });
+});
