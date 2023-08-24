@@ -10,7 +10,6 @@ const tooltipList = [...tooltipTriggerList].map(
 );
 
 const addToCart = document.querySelectorAll(".custom-thumbnail .overlay .btn");
-console.log(addToCart);
 
 addToCart.forEach((e) => {
   e.addEventListener("click", () => {
@@ -44,3 +43,49 @@ sizeOptionsInputs.forEach((item) => {
     item.parentNode.parentNode.classList.add("active");
   });
 });
+
+// المعطيات
+let selections = document.querySelectorAll("[data-product-quantity]");
+let deleteBtns = document.querySelectorAll("[data-remove-from-card]");
+
+//  حساب سعر اجمالي المنتج
+selections.forEach((item) => {
+  item.addEventListener("change", () => {
+    const newQuantity = item.value;
+    const parent = item.closest("[data-product-info]");
+    const pricePerUnit = parent.getAttribute("data-product-price");
+    const totalPriceForProduct = newQuantity * pricePerUnit;
+    parent.querySelector(".total-price-for-product").innerHTML =
+      totalPriceForProduct + "$";
+
+    updateTotalPrice();
+  });
+});
+
+// حذف عنصر ممن عربه الشراء
+
+deleteBtns.forEach((btn) => {
+  btn.addEventListener("click", (d) => {
+    d.preventDefault();
+    btn.closest("[data-product-info]").remove();
+    updateTotalPrice();
+  });
+});
+
+function updateTotalPrice() {
+  // اجمالي محتويات عربة الشراء
+  let totalPriceForAllProduct = 0;
+  document.querySelectorAll("[data-product-info]").forEach((product) => {
+    const pricePerUnite = product.getAttribute("data-product-price");
+    const quantity = product.querySelector("[data-product-quantity]").value;
+    const totalPriceForProduct = pricePerUnite * quantity;
+
+    totalPriceForAllProduct = totalPriceForAllProduct + totalPriceForProduct;
+  });
+  document.getElementById("total-price-for-all-products").textContent =
+    totalPriceForAllProduct + "$";
+}
+
+// copyright ###########
+document.getElementById("copyright").innerHTML =
+  "جميع الحق،ق محفوظة للكتجر سنة" + new Date().getFullYear();
