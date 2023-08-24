@@ -687,6 +687,25 @@ CHECKOUT PAGE END.
 #############
 */
 
+/* 
+############
+PAYMENT PAGE
+############
+*/
+.custom-input-details {
+  border-width: 2px;
+  border-radius: 3px;
+  height: 46px !important;
+  padding: 0 16px;
+  font-size: 18px;
+  width: 98%;
+}
+/* 
+############
+PAYMENT PAGE END.
+############
+*/
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   .inline-form .custom-form-control {

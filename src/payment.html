@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>محتويات العربة</title>
+    <title>الدفع</title>
   </head>
   <body>
     <div class="container-fluid">
@@ -130,10 +130,103 @@
               <li class="breadcrumb-item">
                 <a href="./index.html">الصفحة الرئيسية</a>
               </li>
-              <li class="breadcrumb-item active">عربة الشراء</li>
+              <li class="breadcrumb-item">
+                <a href="./index.html">عربة الشراء</a>
+              </li>
+              <li class="breadcrumb-item active">الدفع</li>
             </ol>
           </div>
         </div>
+        <!-- نموذج الدفع -->
+        <form id="form-checkout">
+          <div class="row">
+            <div class="col-lg-6">
+              <h3 class="heading">بياناتك الشخصية</h3>
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    placeholder="الاسم الاول"
+                    name="first_name"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    placeholder="الاسم الاخير"
+                    name="last_name"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="email"
+                    class="form-control custom-form-control custom-input-details"
+                    placeholder="البريد الالكتروني"
+                    name="email"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    placeholder="المنطقة"
+                    name="first_name"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <select
+                    name="country"
+                    class="custom-form-control custom-input-details form-control"
+                    required>
+                    <option disabled selected value="">اختر دولة</option>
+                    <option value="sa">السعودية</option>
+                    <option value="eg">مصر</option>
+                    <option value="jo">الاردن</option>
+                    <option value="sy">سوريا</option>
+                  </select>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <select
+                    name="city"
+                    class="custom-form-control custom-input-details form-control"
+                    required>
+                    <option disabled selected value="">اختر مدينة</option>
+                  </select>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    placeholder="رقم الموبايل"
+                    name="phone_number"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    placeholder="العنوان الاول"
+                    name="adress_1"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    placeholder=" العنوان الثاني (اختياري)"
+                    name="adress_2" />
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <h3 class="heading">بيانات الدفع</h3>
+            </div>
+          </div>
+        </form>
+        <!-- نهاية نموذج الدفع -->
         <!-- نهاية القائمة الفرعية -->
         <div class="border-between">
           <!-- محتويات العربة  -->
@@ -157,7 +250,7 @@
                         <img
                           src="./images/lacoste_1.png"
                           alt="adidas"
-                          class="d-none d-mb-block" />
+                          class="d-none d-md-block" />
                         <div>
                           <h4>تي شيرت رجالي من لاكوست</h4>
                           <div class="custom-text-muted">ملابس رجالي</div>
@@ -192,7 +285,7 @@
                         <img
                           src="./images/adidas_1.jpg"
                           alt="adidas"
-                          class="d-none d-mb-block" />
+                          class="d-none d-md-block" />
                         <div>
                           <h4>تي شيرت اديداس</h4>
                           <div class="custom-text-muted">ملابس رجالي</div>
