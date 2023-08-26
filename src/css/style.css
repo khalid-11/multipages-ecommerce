@@ -700,6 +700,7 @@ PAYMENT PAGE
   font-size: 18px;
   width: 98%;
 }
+
 /* 
 ############
 PAYMENT PAGE END.
@@ -713,6 +714,13 @@ PAYMENT PAGE END.
   }
   .inline-form .search-btn {
     width: 20% !important;
+  }
+  #form-checkout {
+    max-width: 100vw;
+  }
+  #form-checkout th,
+  #form-checkout td {
+    padding: 5px;
   }
 }
 

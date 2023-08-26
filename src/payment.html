@@ -146,7 +146,7 @@
                 <div class="col-md-6 mb-3">
                   <input
                     type="text"
-                    class="form-control custom-form-control custom-input-details"
+                    class="custom-form-control custom-input-details"
                     placeholder="الاسم الاول"
                     name="first_name"
                     required />
@@ -178,7 +178,7 @@
                 <div class="col-md-6 mb-3">
                   <select
                     name="country"
-                    class="custom-form-control custom-input-details form-control"
+                    class="custom-form-control custom-input-details"
                     required>
                     <option disabled selected value="">اختر دولة</option>
                     <option value="sa">السعودية</option>
@@ -189,8 +189,9 @@
                 </div>
                 <div class="col-md-6 mb-3">
                   <select
+                    id="paymentcities"
                     name="city"
-                    class="custom-form-control custom-input-details form-control"
+                    class="custom-form-control custom-input-details"
                     required>
                     <option disabled selected value="">اختر مدينة</option>
                   </select>
@@ -223,6 +224,65 @@
             </div>
             <div class="col-lg-6">
               <h3 class="heading">بيانات الدفع</h3>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label>
+                    <input
+                      type="radio"
+                      name="payment-method"
+                      value="credit_card"
+                      checked />
+                    البطاقة الإئتمانية
+                  </label>
+                </div>
+                <div class="col-md-6">
+                  <label>
+                    <input
+                      type="radio"
+                      name="payment-method"
+                      value="on_delivery" />
+                    الدفع عند الاستلام
+                  </label>
+                </div>
+              </div>
+              <div class="row" id="credit-card-info">
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    name="credit_card_number"
+                    placeholder="رقم البطاقة"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control custom-form-control custom-input-details"
+                    name="credit_card_expiration_month"
+                    placeholder="شهر الانتهاء"
+                    min="1"
+                    max="12"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="number"
+                    class="form-control custom-form-control custom-input-details"
+                    name="credit_card_expiration_year"
+                    placeholder="سنة الانتهاء"
+                    min="2023"
+                    max="2033"
+                    required />
+                </div>
+                <div class="col-md-6 mb-3">
+                  <input
+                    type="text"
+                    class="form-control custom-form-control custom-input-details"
+                    name="credit_card_cvv"
+                    placeholder="CVV"
+                    required />
+                </div>
+              </div>
             </div>
           </div>
         </form>

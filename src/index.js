@@ -86,6 +86,68 @@ function updateTotalPrice() {
     totalPriceForAllProduct + "$";
 }
 
+const citiesByCountry = {
+  sa: ["الرياض", "جدة"],
+  eg: ["القاهرة", "الاسكندرية"],
+  jo: ["عمان", "الزرقا"],
+  sy: ["دمشق", "حلب"],
+};
+
+document.querySelectorAll("select[name='country']").forEach((item) => {
+  item.addEventListener("change", () => {
+    const country = item.value;
+
+    const cities = citiesByCountry[country];
+
+    document
+      .querySelectorAll("#paymentcities option")
+      .forEach((option) => option.remove());
+
+    const firstOption = document.createElement("option");
+    const optionText = document.createTextNode("اختر المدينة");
+    firstOption.appendChild(optionText);
+    firstOption.setAttribute("value", "");
+    firstOption.setAttribute("disables", "true");
+    firstOption.setAttribute("selected", "true");
+
+    const city_option = document.getElementById("paymentcities");
+    city_option.appendChild(firstOption);
+
+    cities.forEach((city) => {
+      const newOption = document.createElement("option");
+      const optionText = document.createTextNode(city);
+      newOption.appendChild(optionText);
+      newOption.setAttribute("value", cities);
+      city_option.appendChild(newOption);
+    });
+  });
+});
+
+// اخفاء و تظهار حقول ادخال البطاقة الائتمانية
+
+let creditCardInfo = document.querySelectorAll(
+  " #form-checkout input[name='payment-method']"
+);
+
+creditCardInfo.forEach((item) => {
+  item.addEventListener("change", () => {
+    const paymentMethod = item.value;
+    const creditCardInputs = document.querySelectorAll(
+      "#credit-card-info input"
+    );
+
+    if (paymentMethod === "credit_card") {
+      creditCardInputs.forEach((input) => {
+        input.style.display = "block";
+      });
+    } else if (paymentMethod === "on_delivery") {
+      creditCardInputs.forEach((input) => {
+        input.style.display = "none";
+      });
+    }
+  });
+});
+
 // copyright ###########
 document.getElementById("copyright").innerHTML =
   "جميع الحق،ق محفوظة للكتجر سنة" + new Date().getFullYear();
