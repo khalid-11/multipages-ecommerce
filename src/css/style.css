@@ -238,7 +238,7 @@ body {
 
 /* الاكثر مبيعاً */
 .custom-thumbnail img {
-  height: 230px;
+  max-height: 230px;
   width: 100%;
   max-width: 250px;
 }
@@ -706,7 +706,55 @@ PAYMENT PAGE
 PAYMENT PAGE END.
 ############
 */
+/* 
+############
+SEARCH PAGE .
+############
+*/
+#form-advanced-search {
+  border: 1px solid #ebebeb;
+  height: fit-content;
+}
 
+#form-advanced-search .panel {
+  border: none !important;
+  padding: 0;
+}
+#form-advanced-search .panel .list-group-item {
+  border: none;
+}
+.panel .card-header {
+  font-weight: bold;
+  color: #f8ad47 !important;
+  background-color: transparent;
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+}
+.list-group-item,
+.list-group-item label,
+.list-group-item input {
+  cursor: pointer;
+}
+
+.custom-pagination .page-link {
+  margin-inline: 3px;
+  border: 1px solid #ebebeb;
+  color: #c2c2c2;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.custom-pagination .page-link:hover {
+  background-color: #e7e7e7;
+}
+.page-item.active .page-link {
+  background-color: #f8ad47 !important;
+  color: #fff;
+}
+/* 
+############
+SEARCH PAGE END.
+############
+*/
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   .inline-form .custom-form-control {
