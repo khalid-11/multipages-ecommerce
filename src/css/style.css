@@ -755,6 +755,44 @@ SEARCH PAGE .
 SEARCH PAGE END.
 ############
 */
+/* 
+############
+CONTACT PAGE  .
+############
+*/
+textarea {
+  resize: none;
+  padding: 10px;
+}
+textarea::placeholder {
+  color: #bababa;
+}
+.contact-section .contact-info form input {
+  border-radius: 0 3px 3px 0;
+}
+.contact-section .contact-info svg {
+  color: #f8ad47 !important;
+}
+.contact-section .contact-info form input::placeholder {
+  color: #bababa !important;
+}
+.contact-section .contact-info form button {
+  border-radius: 3px 0 0 3px;
+}
+.contact-section .leave-message .custom-input {
+  border-radius: 3px !important;
+  border: 1px solid #dfdfdf;
+  outline: none;
+}
+.contact-section .leave-message .custom-input::placeholder {
+  color: #bababa;
+}
+
+/* 
+############
+CONTACT PAGE END.
+############
+*/
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
   .inline-form .custom-form-control {
