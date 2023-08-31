@@ -1,0 +1,71 @@
+@import "./variables";
+@import "./custom_table";
+@import "./mixins";
+
+.custom-form-control,
+.custom-btn {
+  border: 1px solid #ebebeb;
+  box-shadow: none;
+  border-radius: 2px;
+  color: #868686;
+  height: 38px;
+  padding: 6px 16px;
+  transition: all 0.3s ease;
+}
+.custom-form-control:focus,
+.form-control:focus {
+  border: 1px solid $red-clr !important;
+  box-shadow: 0 0 2px 0 #c21010;
+  outline: none !important;
+}
+.custom-btn:hover {
+  background-color: #d4d4d4;
+  border: 1px solid #bcbcbc;
+  color: $red-clr;
+}
+.custom-btn:focus {
+  background-color: #d4d4d4;
+  border: 1px solid #bcbcbc;
+  color: $red-clr;
+}
+
+// ===
+.carousel-for-brand .custom-btn-outline-warning {
+  background-color: transparent !important;
+  border: 1px solid #f8ad47 !important;
+  color: #f8ad47 !important;
+  margin-top: 10px;
+}
+
+// ===
+#carousel-featured .product-details .custom-btn-outline-warning {
+  background-color: transparent;
+  border: 1px solid $primary-warning;
+  color: $primary-warning;
+}
+.custom-btn-outline-warning {
+  @include custom-btn($primary-warning);
+}
+
+// ===
+
+.custom-btn-warning {
+  background-color: $primary-warning !important;
+  border: none !important;
+  color: block !important;
+  text-align: none;
+  width: fit-content;
+}
+
+// ===
+.custom-btn-outline-danger {
+  background-color: transparent;
+  color: #ffa9a9;
+  border: 1px solid #ffa9a9;
+  border-radius: 5px;
+  transition: all 0.1s ease;
+}
+.custom-btn-outline-danger:hover {
+  border-color: $primary-danger-dark !important;
+  color: $primary-danger-dark !important;
+}

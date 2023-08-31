@@ -34,7 +34,7 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
+        test: /\.(sa|sc|c)ss$/i,
         exclude: /bootstrap\.min\.css$/i,
         use: [
           "style-loader",
@@ -45,6 +45,7 @@ module.exports = {
             },
           },
           "css-loader",
+          "sass-loader",
         ],
       },
       {

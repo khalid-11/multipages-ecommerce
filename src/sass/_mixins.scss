@@ -1,0 +1,16 @@
+@mixin custom-btn($color) {
+  color: $color;
+  border-color: $color;
+  background-color: transparent;
+  transition: 0.3s ease;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus,
+  &:active:hover {
+    background-color: darken($color, 25%);
+    border-color: darken($color, 25%);
+    background-color: transparent;
+  }
+}
