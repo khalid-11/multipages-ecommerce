@@ -1,10 +1,16 @@
-@font-face {
+/* @font-face {
   font-family: "JF Flat Regular";
   src: url(../fonts/JF-Flat-regular.eot);
   src: url(../fonts/JF-Flat-regular.eot?#iefix) format("embedded-opentype"),
     url("../fonts/JF-Flat-regular.svg#JF Flat Regular") format("svg"),
     url(../fonts/JF-Flat-regular.woff) format("woff"),
     url(../fonts/JF-Flat-regular.ttf) format("ttf");
+  font-weight: bolder;
+  font-style: normal;
+} */
+@font-face {
+  font-family: "JF Flat Regular";
+  src: url(../fonts/IBM_Plex_Sans_Arabic/IBMPlexSansArabic-Regular.ttf);
   font-weight: bolder;
   font-style: normal;
 }
