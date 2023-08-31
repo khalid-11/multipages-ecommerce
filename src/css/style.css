@@ -292,12 +292,6 @@ body {
 .carousel-for-brand {
   position: relative;
 }
-.carousel-for-brand .custom-btn-outline-warning {
-  background-color: transparent !important;
-  border: 1px solid #f8ad47 !important;
-  color: #f8ad47 !important;
-  margin-top: 10px;
-}
 
 .carousel-for-brand .carousel-btns {
   width: 80px;
